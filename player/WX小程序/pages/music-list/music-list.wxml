@@ -1,0 +1,34 @@
+<view class="main" xmlns:wx="">
+    <view class="header">
+        <view class="left">
+            <image class="image"
+                   src="https://p.qpic.cn/music_cover/Z03rf9FYedjYl67Xq9LnEiccmY9oHNlzBfGN3e2p69uiaAmjiacKYD1cA/300?n=1"/>
+        </view>
+        <view class="right">
+            <view class="name">
+                <text class="text title">学习用【安静的纯音乐】（4）</text>
+            </view>
+            <view class="author">
+                <view class="portrait">
+                    <image class="image"
+                           src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1881776517,987084327&fm=27&gp=0.jpg"/>
+                </view>
+                <view class="name">
+                    <text class="text">{{author}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view class="list">
+        <view class="item" wx:for="{{musicList}}" wx:for-item="item">
+            <view class="no">
+                <text class="text">{{item.index}}</text>
+            </view>
+            <view class="info">
+                <view class="title">{{item.name}}</view>
+                <view class="author">{{item.singer}}</view>
+            </view>
+        </view>
+    </view>
+</view>

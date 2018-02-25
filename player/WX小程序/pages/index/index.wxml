@@ -1,0 +1,77 @@
+<view xmlns:wx="http://www.w3.org/1999/xhtml">
+    <!-- 搜索-->
+    <view class="search">
+        <view class="key">
+            <text class="text">搜索</text>
+        </view>
+    </view>
+
+    <!-- banner -->
+    <swiper class="banner" indicator-dots="{{indicatorDots}}"
+            autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}"
+            indicator-color="rgba(255, 255, 255, .3)"
+            indicator-active-color="rgba(255, 255, 255, .7)">
+        <block wx:for="{{imgUrls}}">
+            <swiper-item>
+                <image src="{{item}}" class="image"/>
+            </swiper-item>
+        </block>
+    </swiper>
+
+    <!-- 快捷 -->
+    <view class="navigation">
+        <view class="left">
+            <!--<image  class="image" src=""/>-->
+            <text class="text">每日推荐</text>
+        </view>
+        <view class="right">
+            <view class="item">
+                <text class="title">新歌推荐</text>
+                <text class="text">扑密新单开口素炸</text>
+            </view>
+            <view class="item">
+                <text class="title">热门歌单</text>
+                <text class="text">吴奇隆新居OST上线</text>
+            </view>
+        </view>
+    </view>
+
+
+    <!-- 推荐歌单 -->
+    <view class="playlist">
+        <text class="title">为你推荐歌单</text>
+        <view class="list">
+            <view class="row" wx:for="{{playList}}" wx:for-item="item">
+                <view class="item" wx:for="{{item}}" wx:for-item="s" bindtap="openMusicList">
+                    <view style="background: url('{{s.imageUrl}}') no-repeat;  background-size: 100% auto;"
+                           class="image"/>
+                    <text class="text">{{s.text}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+
+
+    <!--<input class="input" bindinput="bindKeyInput" value="{{inputValue}}"/>-->
+
+
+    <!-- 底部 -->
+    <view class="player">
+        <image src="{{poster}}" class="poster"/>
+        <view class="info">
+            <text class="title">{{name}}</text>
+            <text class="text">{{author}}</text>
+        </view>
+
+        <view class="control" bindtap="toPage">
+            <button> {{ !state?'播':'停'}}</button>
+        </view>
+        <!--<view class="list"></view>-->
+    </view>
+
+    <!--<audio class="hide" poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{inputValue}}" id="myAudio"-->
+           <!--controls loop></audio>-->
+    <!--<button type="primary" bindtap="audioPlay">播放</button>-->
+    <!--<button type="primary" bindtap="audioPause">暂停</button>-->
+
+</view>

@@ -1,0 +1,4 @@
+<view>
+    play
+    <button bindtap="ss">停止</button>
+</view>

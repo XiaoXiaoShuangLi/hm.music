@@ -1,0 +1,14 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/play/play",
+    "pages/music-list/music-list"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#31c37c",
+    "navigationBarTitleText": "河马云音乐",
+    "navigationBarTextStyle":"white"
+  }
+}
